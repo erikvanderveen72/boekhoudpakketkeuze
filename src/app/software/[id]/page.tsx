@@ -1,0 +1,200 @@
+import { Metadata } from 'next';
+import Link from 'next/link';
+import { notFound } from 'next/navigation';
+import { getSoftwareBySlug, getSoftwarePackages } from '@/lib/supabase';
+import { softwarePackages } from '@/data/softwareData';
+import PageHero from '@/components/PageHero';
+import FAQSchema from '@/components/FAQSchema';
+import { Check, X, ExternalLink, Clock, Users, Shield, Smartphone, Building2 } from 'lucide-react';
+
+const featureDetails: Record<string, { label: string; description: string }> = {
+  ocr: { label: 'Scan & Herken (OCR)', description: 'Fotografeer bonnetjes en facturen, de software leest ze automatisch in.' },
+  bankLink: { label: 'Bankkoppeling (PSD2)', description: 'Automatische synchronisatie met alle grote Nederlandse banken.' },
+  hours: { label: 'Urenregistratie', description: 'Registreer uren per project en converteer direct naar facturen.' },
+  stock: { label: 'Voorraadbeheer', description: 'Beheer voorraad, inkooporders en productmarges.' },
+  app: { label: 'Mobiele App', description: 'Volledige functionaliteit op iOS en Android.' },
+  vatDirect: { label: 'BTW Direct Versturen', description: 'Verstuur je BTW-aangifte rechtstreeks naar de Belastingdienst.' },
+  multiUser: { label: 'Meerdere Gebruikers', description: 'Geef je boekhouder of medewerkers toegang.' },
+};
+
+const faqs = [
+  { question: 'Kan ik overstappen vanuit een ander pakket?', answer: 'Ja, de meeste pakketten bieden import-functies voor gegevens uit andere software. Neem contact op met de klantenservice voor hulp bij de migratie.' },
+  { question: 'Is mijn data veilig?', answer: 'Alle pakketten in ons overzicht gebruiken versleutelde verbindingen en voldoen aan de AVG. Data wordt opgeslagen in beveiligde datacenters.' },
+  { question: 'Kan ik maandelijks opzeggen?', answer: 'De meeste pakketten werken met maandabonnementen die je elk moment kunt opzeggen. Check de specifieke voorwaarden van dit pakket.' },
+  { question: 'Werkt het met mijn bank?', answer: 'Via PSD2-koppelingen werken alle pakketten met de grote Nederlandse banken: ING, Rabobank, ABN AMRO, Bunq, Knab, en meer.' },
+];
+
+const slugDescriptions: Record<string, string> = {
+  'e-boekhouden': 'e-Boekhouden.nl review: 15 maanden gratis, ideaal voor starters. Bekijk prijzen, functies en ervaringen.',
+  'moneymonk': 'MoneyMonk review: perfect voor ZZP\'ers met urenregistratie. Bekijk prijzen, functies en ervaringen.',
+  'moneybird': 'Moneybird review: gebruiksvriendelijk en populair. Bekijk prijzen, functies en ervaringen.',
+  'jortt': 'Jortt review: simpel boekhouden voor beginners. Bekijk prijzen, functies en ervaringen.',
+  'exact-online': 'Exact Online review: professioneel voor MKB. Bekijk prijzen, functies en ervaringen.',
+  'snelstart': 'SnelStart review: betrouwbaar en compleet. Bekijk prijzen, functies en ervaringen.',
+  'tellow': 'Tellow review: gratis boekhouden voor ZZP. Bekijk functies en ervaringen.',
+  'silvasoft': 'Silvasoft review: compleet boekhoudpakket. Bekijk prijzen, functies en ervaringen.',
+};
+
+export async function generateStaticParams() {
+  return softwarePackages.map(pkg => ({ id: pkg.id }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params;
+  const software = await getSoftwareBySlug(id);
+  if (!software) return { title: 'Software niet gevonden' };
+  const desc = slugDescriptions[software.id] || `${software.name}: bekijk prijzen, functies, voor- en nadelen. Onafhankelijke review.`;
+  return {
+    title: `${software.name} Review — Prijzen, Functies & Ervaringen`,
+    description: desc,
+    alternates: { canonical: `https://boekhoudpakketkeuze.nl/software/${software.id}` },
+  };
+}
+
+const audienceLabels: Record<string, string> = {
+  'zzp-service': 'ZZP Dienstverlening',
+  'zzp-trade': 'ZZP Handel',
+  'mkb-small': 'Klein MKB',
+  'mkb-large': 'Groot MKB',
+  'starter': 'Starters',
+};
+
+export default async function SoftwareDetailPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const software = await getSoftwareBySlug(id);
+  if (!software) notFound();
+
+  return (
+    <>
+      <PageHero
+        title={software.name}
+        highlightedSubtitle={software.usp}
+        subtitle={software.description}
+        badge={`${software.reviewScore.toFixed(1)} ★ · ${software.reviewCount} reviews`}
+        breadcrumbs={[
+          { label: 'Software', href: '/software' },
+          { label: software.name, href: `/software/${software.id}` },
+        ]}
+      />
+
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'SoftwareApplication',
+            name: software.name,
+            applicationCategory: 'BusinessApplication',
+            operatingSystem: 'Web',
+            offers: {
+              '@type': 'Offer',
+              price: software.monthlyPrice.toString(),
+              priceCurrency: 'EUR',
+              priceValidUntil: '2026-12-31',
+            },
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: software.reviewScore.toString(),
+              bestRating: '10',
+              ratingCount: software.reviewCount.toString(),
+            },
+          }),
+        }}
+      />
+
+      {/* Price + CTA Card */}
+      <section className="py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-3 gap-8">
+            <div className="lg:col-span-2 space-y-8">
+              {/* Audience badges */}
+              <div className="flex flex-wrap gap-2">
+                {software.targetAudience.map(a => (
+                  <span key={a} className="px-3 py-1 rounded-full border border-border text-sm text-text-muted">{audienceLabels[a]}</span>
+                ))}
+              </div>
+
+              {/* Pros & Cons */}
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-white rounded-2xl p-6 border border-border">
+                  <h3 className="text-lg font-bold text-emerald-600 flex items-center gap-2 mb-4"><Check className="w-5 h-5" /> Voordelen</h3>
+                  <ul className="space-y-3">
+                    {software.pros.map((pro, i) => (
+                      <li key={i} className="flex items-start gap-2 text-stone-700"><Check className="w-4 h-4 text-emerald-500 mt-1 shrink-0" />{pro}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="bg-white rounded-2xl p-6 border border-border">
+                  <h3 className="text-lg font-bold text-red-600 flex items-center gap-2 mb-4"><X className="w-5 h-5" /> Nadelen</h3>
+                  <ul className="space-y-3">
+                    {software.cons.map((con, i) => (
+                      <li key={i} className="flex items-start gap-2 text-stone-700"><X className="w-4 h-4 text-red-400 mt-1 shrink-0" />{con}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              {/* Features */}
+              <div>
+                <h2 className="text-2xl font-bold text-text-main mb-6">Functies</h2>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {Object.entries(featureDetails).map(([key, { label, description }]) => {
+                    const hasFeature = software.features[key as keyof typeof software.features];
+                    return (
+                      <div key={key} className={`bg-white rounded-xl p-4 border border-border ${!hasFeature ? 'opacity-50' : ''}`}>
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className="font-semibold text-text-main">{label}</span>
+                          {hasFeature ? <Check className="w-4 h-4 text-emerald-500" /> : <X className="w-4 h-4 text-red-400" />}
+                        </div>
+                        <p className="text-sm text-text-muted">{description}</p>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+
+            {/* Sidebar CTA */}
+            <div>
+              <div className="bg-white rounded-2xl p-6 border border-border sticky top-20">
+                <div className="text-center mb-6">
+                  <div className="text-4xl font-bold text-primary">&euro;{software.monthlyPrice.toFixed(2)}</div>
+                  <p className="text-sm text-text-muted">per maand</p>
+                  {software.priceNote && <span className="inline-block mt-2 px-3 py-1 bg-emerald-50 text-emerald-800 text-sm font-semibold rounded-full border border-emerald-200">{software.priceNote}</span>}
+                </div>
+                <div className="flex justify-between text-sm mb-6">
+                  <span className="text-text-muted">Proefperiode</span>
+                  <span className="font-medium">{software.trialPeriodDays} dagen</span>
+                </div>
+                <a
+                  href={software.website}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="block w-full text-center bg-primary text-white py-3 rounded-xl font-semibold hover:bg-primary-dark transition-colors mb-3"
+                >
+                  Bezoek Website <ExternalLink className="inline w-4 h-4 ml-1" />
+                </a>
+                <a
+                  href={software.website}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="block w-full text-center border border-border py-3 rounded-xl font-semibold text-text-main hover:bg-stone-50 transition-colors"
+                >
+                  Gratis Proberen
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 bg-stone-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FAQSchema items={faqs} />
+        </div>
+      </section>
+    </>
+  );
+}
