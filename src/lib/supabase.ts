@@ -41,6 +41,8 @@ export interface DatabaseSoftwarePackage {
 }
 
 function mapToStaticFormat(pkg: DatabaseSoftwarePackage): SoftwarePackage {
+  // Merge with static data to get new content fields (detailedReview, faqItems, etc.)
+  const staticPkg = softwarePackages.find(sp => sp.id === pkg.slug);
   return {
     id: pkg.slug,
     name: pkg.name,
@@ -66,6 +68,11 @@ function mapToStaticFormat(pkg: DatabaseSoftwarePackage): SoftwarePackage {
     cons: pkg.cons || [],
     bestFor: pkg.best_for || '',
     website: pkg.affiliate_link || pkg.website || '',
+    // New SEO content fields from static data
+    detailedReview: staticPkg?.detailedReview,
+    faqItems: staticPkg?.faqItems,
+    pricingDetails: staticPkg?.pricingDetails,
+    idealFor: staticPkg?.idealFor,
   };
 }
 

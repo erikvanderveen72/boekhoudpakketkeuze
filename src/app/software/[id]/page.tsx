@@ -5,7 +5,7 @@ import { getSoftwareBySlug, getSoftwarePackages } from '@/lib/supabase';
 import { softwarePackages } from '@/data/softwareData';
 import PageHero from '@/components/PageHero';
 import FAQSchema from '@/components/FAQSchema';
-import { Check, X, ExternalLink, Clock, Users, Shield, Smartphone, Building2 } from 'lucide-react';
+import { Check, X, ExternalLink, Clock, Users, Shield, Smartphone, Building2, Target, CreditCard } from 'lucide-react';
 
 const featureDetails: Record<string, { label: string; description: string }> = {
   ocr: { label: 'Scan & Herken (OCR)', description: 'Fotografeer bonnetjes en facturen, de software leest ze automatisch in.' },
@@ -16,13 +16,6 @@ const featureDetails: Record<string, { label: string; description: string }> = {
   vatDirect: { label: 'BTW Direct Versturen', description: 'Verstuur je BTW-aangifte rechtstreeks naar de Belastingdienst.' },
   multiUser: { label: 'Meerdere Gebruikers', description: 'Geef je boekhouder of medewerkers toegang.' },
 };
-
-const faqs = [
-  { question: 'Kan ik overstappen vanuit een ander pakket?', answer: 'Ja, de meeste pakketten bieden import-functies voor gegevens uit andere software. Neem contact op met de klantenservice voor hulp bij de migratie.' },
-  { question: 'Is mijn data veilig?', answer: 'Alle pakketten in ons overzicht gebruiken versleutelde verbindingen en voldoen aan de AVG. Data wordt opgeslagen in beveiligde datacenters.' },
-  { question: 'Kan ik maandelijks opzeggen?', answer: 'De meeste pakketten werken met maandabonnementen die je elk moment kunt opzeggen. Check de specifieke voorwaarden van dit pakket.' },
-  { question: 'Werkt het met mijn bank?', answer: 'Via PSD2-koppelingen werken alle pakketten met de grote Nederlandse banken: ING, Rabobank, ABN AMRO, Bunq, Knab, en meer.' },
-];
 
 const slugDescriptions: Record<string, string> = {
   'e-boekhouden': 'e-Boekhouden.nl review: 15 maanden gratis, ideaal voor starters. Bekijk prijzen, functies en ervaringen.',
@@ -153,6 +146,45 @@ export default async function SoftwareDetailPage({ params }: { params: Promise<{
                   })}
                 </div>
               </div>
+
+              {/* Detailed Review */}
+              {software.detailedReview && (
+                <div>
+                  <h2 className="text-2xl font-bold text-text-main mb-4">Uitgebreide Review</h2>
+                  <div className="bg-white rounded-2xl p-6 border border-border">
+                    <p className="text-text-muted leading-relaxed whitespace-pre-line">{software.detailedReview}</p>
+                  </div>
+                </div>
+              )}
+
+              {/* Pricing Details */}
+              {software.pricingDetails && (
+                <div>
+                  <h2 className="text-2xl font-bold text-text-main mb-4 flex items-center gap-2">
+                    <CreditCard className="w-6 h-6 text-primary" /> Prijzen & Abonnementen
+                  </h2>
+                  <div className="bg-white rounded-2xl p-6 border border-border">
+                    <p className="text-text-muted leading-relaxed">{software.pricingDetails}</p>
+                  </div>
+                </div>
+              )}
+
+              {/* Ideal For */}
+              {software.idealFor && software.idealFor.length > 0 && (
+                <div>
+                  <h2 className="text-2xl font-bold text-text-main mb-4 flex items-center gap-2">
+                    <Target className="w-6 h-6 text-primary" /> Ideaal voor
+                  </h2>
+                  <div className="grid sm:grid-cols-2 gap-3">
+                    {software.idealFor.map((useCase, i) => (
+                      <div key={i} className="flex items-start gap-3 bg-white rounded-xl p-4 border border-border">
+                        <Check className="w-5 h-5 text-emerald-500 mt-0.5 shrink-0" />
+                        <span className="text-text-muted">{useCase}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* Sidebar CTA */}
@@ -189,10 +221,26 @@ export default async function SoftwareDetailPage({ params }: { params: Promise<{
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* FAQ - per pakket unieke vragen */}
       <section className="py-16 bg-stone-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FAQSchema items={faqs} />
+          <FAQSchema items={software.faqItems || []} />
+        </div>
+      </section>
+
+      {/* Vergelijk CTA */}
+      <section className="py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl font-bold text-text-main mb-3">{software.name} vergelijken met alternatieven?</h2>
+          <p className="text-text-muted mb-6">Bekijk hoe {software.name} scoort tegenover andere boekhoudpakketten.</p>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Link href="/vergelijken" className="px-5 py-2.5 bg-primary text-white rounded-xl font-semibold hover:bg-primary-dark transition-colors">
+              Vergelijk alle pakketten
+            </Link>
+            <Link href="/software" className="px-5 py-2.5 border border-border rounded-xl font-semibold text-text-main hover:bg-stone-50 transition-colors">
+              Bekijk alle software
+            </Link>
+          </div>
         </div>
       </section>
     </>
