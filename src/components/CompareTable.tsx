@@ -34,7 +34,7 @@ const featureSections: FeatureSection[] = [
         key: 'price',
         label: 'Prijs per maand',
         tooltip: 'Minimale maandelijkse kosten voor het pakket',
-        getValue: (pkg) => `€${pkg.monthlyPrice.toFixed(2)}`,
+        getValue: (pkg) => pkg.priceLabel || (pkg.monthlyPrice === 0 ? 'Gratis' : `€${pkg.monthlyPrice.toFixed(2)}`),
       },
       {
         key: 'priceNote',
@@ -294,6 +294,21 @@ export default function CompareTable() {
               {expandedSections[section.title] && (
                 <div className="overflow-x-auto">
                   <table className="w-full">
+                    <thead>
+                      <tr className="border-b border-border bg-white">
+                        <th className="px-6 py-3 text-left text-xs font-semibold text-text-muted min-w-[180px] border-r border-border">
+                          Functie
+                        </th>
+                        {selectedPackages.map((pkg) => (
+                          <th
+                            key={pkg.id}
+                            className="px-6 py-3 text-center text-sm font-bold text-text-main min-w-[150px] border-r border-border last:border-r-0"
+                          >
+                            {pkg.name}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
                     <tbody>
                       {section.features.map((feature, idx) => (
                         <tr
