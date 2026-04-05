@@ -42,12 +42,12 @@ export const softwarePackages: SoftwarePackage[] = [
     reviewScore: 8.9,
     reviewCount: 1250,
     usp: 'Gratis voor starters',
-    description: 'De toegankelijke allrounder voor starters en ZZP\'ers. e-Boekhouden.nl biedt een complete suite met boekhouden, factureren, urenregistratie en directe BTW-verwerking. De platform ondersteunt automatische bankkoppelingen waardoor je geen handmatige invoer meer nodig hebt. Met 15 maanden gratis voor nieuwe ondernemers is het een kosteneffectieve manier om je administratie op orde te krijgen zonder dat je meteen een duur pakket nodig hebt.',
+    description: 'e-Boekhouden.nl is geschikt voor starters en zzp\'ers. Het pakket biedt facturatie, urenregistratie en directe btw-verwerking. Het platform ondersteunt automatische bankkoppelingen waardoor je geen handmatige invoer meer nodig hebt. Het is vooral interessant voor nieuwe ondernemers door de 15 maanden gratis proefperiode. Een aandachtspunt is de wat gedateerde interface vergeleken met nieuwere pakketten.',
     pros: [
-      '15 maanden gratis voor starters - ideaal om de software eerst te testen voordat je betaalt',
+      '15 maanden gratis voor starters - ruim de tijd om de software te testen voordat je betaalt',
       'Automatische bankkoppelingen met alle Nederlandse banken voor efficiënte transactieregistratie',
       'BTW kan direct naar de belastingdienst verstuurd worden - geen extra stappen nodig',
-      'Uitgebreide klantenservice via telefoon, email en chat - ideaal voor beginners',
+      'Klantenservice via telefoon, email en chat - toegankelijk voor beginners',
       'Urenregistratie ingebouwd voor dienstverleners en consultants',
       'Multi-user functionaliteit zodat je team ook kan werken in het systeem'
     ],
@@ -104,13 +104,13 @@ export const softwarePackages: SoftwarePackage[] = [
     reviewScore: 9.2,
     reviewCount: 890,
     usp: 'Specialist in uren & projecten',
-    description: 'MoneyMonk is obsessief gericht op dienstverleners en heeft urenregistratie en projectmanagement als kern van zijn financiële administratie. Het systeem is speciaal ontworpen voor consultants, freelancers en adviesbureaus die op projectbasis werken. MoneyMonk biedt een gratis plan voor omzet tot €5.000 per maand, wat veel startende dienstverleners toestaat zonder kosten te beginnen. De intuïtieve interface maakt het eenvoudig om uren in te tracken en deze direct aan projecten en facturen te koppelen.',
+    description: 'MoneyMonk is specifiek ontwikkeld voor zzp\'ers en kleine dienstverlenende ondernemers die uren, projecten en facturen willen combineren in één pakket. Het pakket biedt urenregistratie, projectbeheer en facturatie. Het is vooral interessant voor consultants en freelancers die op projectbasis werken. MoneyMonk biedt een gratis plan voor omzet tot €5.000 per maand. Een aandachtspunt is dat het pakket minder geschikt is voor ondernemers zonder urenregistratiebehoefte.',
     pros: [
-      'Uitstekende urenregistratie met real-time tracking en automatische stopwatch',
+      'Uitgebreide urenregistratie met real-time tracking en automatische stopwatch',
       'Projectbudgetten bewaken - je ziet direct als je budget overschrijdt',
-      'Topklasse klantenservice met snelle response times en Nederlands sprekend team',
+      'Goede klantenservice met snelle response times en Nederlands sprekend team',
       'Intuïtieve interface speciaal ontworpen voor dienstverleners, niet ingewikkeld',
-      'Projectgebonden boekhouden - ideaal voor meerdere klanten tegelijk',
+      'Projectgebonden boekhouden - geschikt voor meerdere klanten tegelijk',
       'Automatische facturering op basis van geloste uren met aangepaste tarieven per project'
     ],
     cons: [
@@ -122,7 +122,7 @@ export const softwarePackages: SoftwarePackage[] = [
     ],
     bestFor: 'Dienstverleners & Consultants',
     website: 'https://www.moneymonk.nl',
-    detailedReview: 'MoneyMonk onderscheidt zich sterk als de specialist voor dienstverleners en consultants. Waar andere pakketten boekhouden centraal stellen, staat bij MoneyMonk het projectwerk en urenregistratie voorop. Dit is fundamenteel anders ingedeeld. De urenregistratie-functie is echt uitstekend: je kunt een stopwatch starten, pauseren en later hernemen. De uren worden automatisch aan projecten en klanten gekoppeld. Dit maakt factuurstelling eenvoudig - je selecteert welke uren je wilt factureren en de factuur wordt automatisch aangemaakt. De projectbudgetterings-feature is voor dienstverleners essentieel: je ziet precies hoeveel budget je hebt besteed en waar je risico loopt om negatief uit te vallen. Het gratis plan tot €5.000 omzet is genereus. De klantenservice is legendarisch goed - echte Nederlanders die snel reageren. Nadeel: het is niet ideaal als je niet veel uren vastleggt of als je producten verkoopt.',
+    detailedReview: 'MoneyMonk onderscheidt zich sterk als de specialist voor dienstverleners en consultants. Waar andere pakketten boekhouden centraal stellen, staat bij MoneyMonk het projectwerk en urenregistratie voorop. Dit is fundamenteel anders ingedeeld. De urenregistratie-functie is echt uitstekend: je kunt een stopwatch starten, pauseren en later hernemen. De uren worden automatisch aan projecten en klanten gekoppeld. Dit maakt factuurstelling eenvoudig - je selecteert welke uren je wilt factureren en de factuur wordt automatisch aangemaakt. De projectbudgetterings-feature is voor dienstverleners essentieel: je ziet precies hoeveel budget je hebt besteed en waar je risico loopt om negatief uit te vallen. Het gratis plan tot €5.000 omzet is genereus. De klantenservice wordt goed beoordeeld - echte Nederlanders die snel reageren. Nadeel: het is niet ideaal als je niet veel uren vastleggt of als je producten verkoopt.',
     faqItems: [
       {
         question: 'Is MoneyMonk echt gratis tot €5.000 omzet?',
@@ -164,10 +164,10 @@ export const softwarePackages: SoftwarePackage[] = [
     features: { ocr: true, bankLink: true, hours: true, stock: false, app: true, vatDirect: true, multiUser: true },
     reviewScore: 8.8,
     reviewCount: 2100,
-    usp: 'Superieure UX & design',
-    description: 'Moneybird bewijst dat boekhouden niet saai hoeft te zijn. Met een moderne, intuïtieve tijdlijn-interface maakt Moneybird het administratieve werk bijna prettig. Het pakket biedt alle essentiële functies voor zzp\'ers en kleine bedrijven: automatische bankkoppelingen, urenregistratie, offertestelling en digitale ondertekening. De 6 maanden gratis proefperiode is een van de genereuze trials in de branche. Voor ondernemers die waarde hechten aan esthetiek en gebruikerservaring is Moneybird een uitstekende keuze.',
+    usp: 'Overzichtelijke interface',
+    description: 'Moneybird is een gebruiksvriendelijk boekhoudpakket dat vooral populair is bij zzp\'ers en kleine ondernemers. Het pakket biedt automatische bankkoppelingen, urenregistratie, offertestelling en digitale ondertekening. Het is vooral interessant voor ondernemers die waarde hechten aan een overzichtelijke interface. De proefperiode van 6 maanden is ruim. Een aandachtspunt is het ontbreken van telefonische support.',
     pros: [
-      'Prachtige, moderne interface die administratie aangenaam maakt in plaats van belastend',
+      'Overzichtelijke, moderne interface die de administratie toegankelijk maakt',
       'Eigen betaalrekening mogelijk via IBAN-mogelijkheid - bank en boekhouding in één',
       'Digitale offertes kunnen elektronisch ondertekend worden - professioneel en efficiënt',
       '6 maanden gratis proefperiode - zeer genereus voor het testen van alle functies',
@@ -183,7 +183,7 @@ export const softwarePackages: SoftwarePackage[] = [
     ],
     bestFor: 'Design-bewuste ondernemers',
     website: 'https://www.moneybird.nl',
-    detailedReview: 'Moneybird heeft bewezen dat boekhouden niet in kantoorgrijs hoeft te zijn. Het bedrijf heeft duidelijk geïnvesteerd in gebruikerservaring en dit voelt je bij elke interactie. De tijdlijn-interface is uniek en vernieuwend - in plaats van die afgebrokkelde "dashboard" schermen als veel concurrenten, toont Moneybird je alles op chronologische volgorde. Dit maakt het intuïtief en prettig om je administratie bij te houden. De 6 maanden gratis probeerperiode is extreem genereus en laat zien dat Moneybird echt vertrouwt op de kwaliteit van hun product. De mogelijkheid om een eigen betaalrekening in te stellen (embedded finance) is modern en handig - je bankrekening en boekhouding worden één. Het gebrek aan telefonische support is jammer, maar de email- en chatondersteuning is responsief. Voor zzp\'ers en kleine bedrijven die waarde hechten aan esthetiek en gebruiksgemak is Moneybird zeer aan te bevelen.',
+    detailedReview: 'Moneybird onderscheidt zich door een moderne en overzichtelijke interface. Het bedrijf heeft duidelijk geïnvesteerd in gebruikerservaring en dit voelt je bij elke interactie. De tijdlijn-interface is uniek en vernieuwend - in plaats van die afgebrokkelde "dashboard" schermen als veel concurrenten, toont Moneybird je alles op chronologische volgorde. Dit maakt het intuïtief en prettig om je administratie bij te houden. De 6 maanden gratis probeerperiode is extreem genereus en laat zien dat Moneybird echt vertrouwt op de kwaliteit van hun product. De mogelijkheid om een eigen betaalrekening in te stellen (embedded finance) is modern en handig - je bankrekening en boekhouding worden één. Het gebrek aan telefonische support is jammer, maar de email- en chatondersteuning is responsief. Voor zzp\'ers en kleine bedrijven die waarde hechten aan esthetiek en gebruiksgemak kan Moneybird passend zijn.',
     faqItems: [
       {
         question: 'Hoe lang is de proefperiode van Moneybird?',
@@ -226,7 +226,7 @@ export const softwarePackages: SoftwarePackage[] = [
     reviewScore: 8.7,
     reviewCount: 780,
     usp: 'Automatisering & Boekhoudbot',
-    description: 'Jortt is de innovatieve uitdager op de Nederlandse boekhoudmarkt met geavanceerde AI-gedreven automatisering. De Boekhoudbot categoriseert transacties automatisch zodat je praktisch niets handmatig hoeft in te voeren. Het systeem voert realtime fiscale checks uit om te zorgen dat je altijd compliant bent met belastingregels. Uniek is dat Jortt de jaarrekening al inbegrepen heeft in het abonnement - geen extra kosten. Dit is een modern, ondernemer-first gericht platform dat duidelijk nadenkt over wat ondernemers werkelijk nodig hebben.',
+    description: 'Jortt is geschikt voor zzp\'ers en kleine ondernemers die veel waarde hechten aan automatisering. Het pakket biedt een Boekhoudbot die transacties automatisch categoriseert, realtime fiscale checks en een inbegrepen jaarrekening. Het is vooral interessant voor ondernemers die hun administratie zo veel mogelijk willen automatiseren. Een aandachtspunt is dat het pakket minder geschikt kan zijn voor complexe bedrijfsstructuren.',
     pros: [
       'Boekhoudbot automatiseert tot 99% van de transacties - nagenoeg geen handmatige invoer meer',
       'Realtime fiscale checks zorgen dat je altijd compliant bent met belastingregels en regelgeving',
@@ -287,7 +287,7 @@ export const softwarePackages: SoftwarePackage[] = [
     reviewScore: 8.4,
     reviewCount: 1650,
     usp: 'Schaalbaarheid & ERP',
-    description: 'Exact Online is de marktstandaard voor serieuze bedrijven en groeiend MKB. Het biedt volledige ERP-integratie met meer dan 200 koppelingen naar andere systemen. Het platform is ontwikkeld door Exact - een Nederlands bedrijf dat sinds 1981 boekhoud- en bedrijfssoftware levert. Exact Online is niet zomaar boekhouden; het is een volledig bedrijfsmanagementsysteem met voorraadbeheer, salarisadministratie, CRM en nog veel meer. Dit is de keuze voor bedrijven die echt groeien en meer nodig hebben dan alleen facturering.',
+    description: 'Exact Online is geschikt voor groeiend mkb en bedrijven met meerdere werknemers. Het pakket biedt volledige ERP-integratie, voorraadbeheer, salarisadministratie en meer dan 200 koppelingen naar andere systemen. Het is vooral interessant voor bedrijven die meer nodig hebben dan alleen facturering. Een aandachtspunt is het hogere prijspunt en de steilere leercurve vergeleken met eenvoudigere pakketten.',
     pros: [
       'Volledige ERP mogelijkheden - alles wat je bedrijf nodig heeft is geïntegreerd',
       'Enorme App Store met meer dan 200 koppelingen naar andere business tools',
@@ -305,7 +305,7 @@ export const softwarePackages: SoftwarePackage[] = [
     ],
     bestFor: 'Groeiend MKB',
     website: 'https://www.exact.com/nl',
-    detailedReview: 'Exact Online is een bedrijf dat respect verdient - meer dan 40 jaar ervaring in Nederland en jarenlange track record van stabiliteit. Waar kleinere pakketten zoals e-Boekhouden of Moneybird gericht zijn op starters, is Exact Online duidelijk gebouwd voor bedrijven die serieus groeien. De ERP-mogelijkheden zijn werkelijk uitgebreid: je kunt voorraden beheren, meerdere locaties ondersteunen, meerdere valuta\'s handelen, en veel meer. De integratie met HR en salarisadministratie maakt het een compleet HR-systeem. Met meer dan 200 app-integraties kun je bijna alles wat je wenst koppelen. Accountants werken graag met Exact omdat de data export standaard werkt. Nadelen: het is duur (€42/maand), complex om in te richten, en waarschijnlijk grotendeels overkill als je klein bent. Voor handelsbedrijven die groeien of bedrijven met werknemers is het een sterke keuze.',
+    detailedReview: 'Exact Online is een gevestigd bedrijf - meer dan 40 jaar ervaring in Nederland en jarenlange track record van stabiliteit. Waar kleinere pakketten zoals e-Boekhouden of Moneybird gericht zijn op starters, is Exact Online duidelijk gebouwd voor bedrijven die serieus groeien. De ERP-mogelijkheden zijn werkelijk uitgebreid: je kunt voorraden beheren, meerdere locaties ondersteunen, meerdere valuta\'s handelen, en veel meer. De integratie met HR en salarisadministratie maakt het een compleet HR-systeem. Met meer dan 200 app-integraties kun je bijna alles wat je wenst koppelen. Accountants werken graag met Exact omdat de data export standaard werkt. Nadelen: het is duur (€42/maand), complex om in te richten, en waarschijnlijk grotendeels overkill als je klein bent. Voor handelsbedrijven die groeien of bedrijven met werknemers is het een sterke keuze.',
     faqItems: [
       {
         question: 'Is Exact Online geschikt voor kleine bedrijven?',
@@ -348,14 +348,14 @@ export const softwarePackages: SoftwarePackage[] = [
     reviewScore: 8.5,
     reviewCount: 420,
     usp: 'Modulair & voorraadbeheer',
-    description: 'Silvasoft biedt ERP-functionaliteit voor een fractie van de prijs van Exact Online. Met modulaire opbouw en uitgebreid voorraadbeheer is het ideaal voor handelsbedrijven en kleine bedrijven met voorraadbehoeften. Silvasoft is een Nederlands bedrijf dat zich richt op het betaalbaarder maken van professionele bedrijfssoftware. Het systeem kan volledig naar wens worden samengesteld: je neemt alleen de modules die je nodig hebt, waardoor de kostprijs laag blijft. De voorraadbeheermodule is echt uitgebreid met real-time stock tracking, inkooporderbeheer en multichannel support.',
+    description: 'Silvasoft is geschikt voor handelsbedrijven en kleine bedrijven met voorraadbehoeften. Het pakket biedt modulaire opbouw, voorraadbeheer en CRM. Het is vooral interessant voor ondernemers die ERP-functionaliteit zoeken voor een lagere prijs dan Exact Online. Een aandachtspunt is het ontbreken van een mobiele app en de wat gedateerde interface.',
     pros: [
       'Betaalbaar voorraadbeheer - veel goedkoper dan Exact Online maar toch professioneel',
       'Modulair uitbreidbaar - je betaalt alleen voor wat je echt gebruikt',
       'Inkooporders volledig beheerd - je kunt leveranciersorders volledig in het systeem afhandelen',
       'CRM module ingebouwd - klantgegevens en verkoopgeschiedenis samen met boekhouddata',
       'Flexibele prijsstructuur - betaalbaarder naarmate je bedrijf groeit',
-      'Ondersteunt meerdere winkels/locaties - ideaal voor ketens of multi-channel verkoop'
+      'Ondersteunt meerdere winkels/locaties - geschikt voor ketens of multi-channel verkoop'
     ],
     cons: [
       'Interface is minder modern en voelt wat gedateerd vergeleken met nieuwere concurrenten',
@@ -409,12 +409,12 @@ export const softwarePackages: SoftwarePackage[] = [
     reviewScore: 8.3,
     reviewCount: 1890,
     usp: 'Accountants-integratie',
-    description: 'SnelStart is ontworpen voor synergie met je boekhouder met naadloze integratie in accountantskantoren. Het platform biedt een grote installed base in Nederland met tientallen jaren ervaring. SnelStart is ideaal voor ondernemers die hun administratie samen met hun accountant willen beheren - geen separate imports/exports, maar direct samenwerken in dezelfde omgeving. De dedicated bonnetjes scan-app en telefonische support maken SnelStart toegankelijk voor ondernemers die graag wat handholding willen.',
+    description: 'SnelStart is geschikt voor ondernemers die nauw samenwerken met een accountant. Het pakket biedt directe accountantsintegratie, een bonnetjes scan-app en telefonische support. Het is vooral interessant voor ondernemers in vakgebonden branches die betrouwbaarheid en persoonlijke ondersteuning waarderen. Een aandachtspunt is dat het pakket minder geschikt is voor ondernemers die alles zelf willen doen zonder accountant.',
     pros: [
-      'Perfecte boekhouder-samenwerking - je accountant kan direct in je SnelStart werken',
+      'Directe boekhouder-samenwerking - je accountant kan direct in je SnelStart werken',
       'Bonnetjes scannen app - makkelijk onkosten vastleggen via fotografie',
       'Grote installed base in Nederland - veel accountants zijn ervaren met SnelStart',
-      'Telefonische support beschikbaar - perfect voor ondernemers die graag een mens aan de telefoon hebben',
+      'Telefonische support beschikbaar - handig voor ondernemers die graag een mens aan de telefoon hebben',
       'Proven track record - SnelStart bestaat al vele jaren en is betrouwbaar',
       'Goed voor construction en andere vakgebonden industrieën'
     ],
@@ -427,7 +427,7 @@ export const softwarePackages: SoftwarePackage[] = [
     ],
     bestFor: 'Samenwerking met boekhouder',
     website: 'https://www.snelstart.nl',
-    detailedReview: 'SnelStart is het klassieke Nederlandse boekhoudpakket met ruim 25 jaar track record. Het onderscheidt zich niet door innovatie, maar door betrouwbaarheid en sterke accountant-integratie. Als je met een accountant werkt, is SnelStart een uitstekende keuze omdat je accountant rechtstreeks in je SnelStart kan werken - geen gegevens heen en weer sturen, maar echt samenwerken. De dedicated bonnetjes scan-app (via smartphone) maakt onkosten vastleggen makkelijk. De telefonische support is goud waard voor ondernemers die wat begeleiding willen. De grote installed base betekent dat veel accountants hier mee willen werken. Nadeel: SnelStart is niet ideaal als je DIY wil gaan - het systeem is gebouwd op de aanname dat je met een accountant werkt. Ook voelt de interface wat oud. Voor ondernemers in construction, vastgoed en andere vakgebonden industrieën is SnelStart echter nog steeds de standaard keuze.',
+    detailedReview: 'SnelStart is het klassieke Nederlandse boekhoudpakket met ruim 25 jaar track record. Het onderscheidt zich niet door innovatie, maar door betrouwbaarheid en sterke accountant-integratie. Als je met een accountant werkt, past SnelStart vaak goed omdat je accountant rechtstreeks in je SnelStart kan werken - geen gegevens heen en weer sturen, maar echt samenwerken. De dedicated bonnetjes scan-app (via smartphone) maakt onkosten vastleggen makkelijk. De telefonische support is handig voor ondernemers die wat begeleiding willen. De grote installed base betekent dat veel accountants hier mee willen werken. Nadeel: SnelStart is niet ideaal als je DIY wil gaan - het systeem is gebouwd op de aanname dat je met een accountant werkt. Ook voelt de interface wat oud. Voor ondernemers in construction, vastgoed en andere vakgebonden industrieën is SnelStart echter nog steeds de standaard keuze.',
     faqItems: [
       {
         question: 'Kan mijn accountant direct in mijn SnelStart werken?',
@@ -470,14 +470,14 @@ export const softwarePackages: SoftwarePackage[] = [
     reviewScore: 8.6,
     reviewCount: 560,
     usp: 'Mobile-first & bankieren',
-    description: 'Tellow is het baanbrekende concept van embedded finance - boekhoudsoftware die tegelijkertijd je bank is. Tellow geeft je een eigen IBAN-rekeningummer zodat al je geld via Tellow loopt. Dit elimineert veel administratieve koppelingen omdat je bank en boekhoudadministratie één zijn. Het is echt mobile-first: alles is optimaliseerd voor smartphone en veel ondernemers beheren hun hele administratie vanuit hun telefoon. GPS rittenregistratie voor ondernemers die veel mobiel werken, en snelheid staat voorop.',
+    description: 'Tellow is geschikt voor mobiele ondernemers en eenmanszaken. Het pakket biedt een geïntegreerde betaalrekening (IBAN), een mobile-first app en GPS-rittenregistratie. Het is vooral interessant voor zzp\'ers die hun administratie onderweg willen beheren. Een aandachtspunt is het ontbreken van multi-user toegang en beperkte desktop-functionaliteit.',
     pros: [
       'Geïntegreerde betaalrekening (IBAN) - je bank EN je boekhoudadministratie zijn één',
-      'Beste mobiele app in de markt - echt ontworpen voor telefoon, niet web-adapted',
-      'GPS rittenregistratie - perfect voor bezoekers, loodgieters, elektriciens en bezorgdiensten',
+      'Sterke mobiele app - ontworpen voor telefoon, niet aangepast vanuit web',
+      'GPS rittenregistratie - geschikt voor ondernemers die veel onderweg zijn',
       'Snel en simpel - minimaal onderhoud en overhead in de administratie',
       'Real-time inzicht in je geld - in en uitkomsten zijn direct zichtbaar',
-      'Perfecte integratie met Paysafe betaalterminals - voor ondernemers met fysieke verkoop'
+      'Integratie met Paysafe betaalterminals beschikbaar voor fysieke verkoop'
     ],
     cons: [
       'Beperkt als je groot je groeit en je eigen bank wilt bijhouden',
@@ -488,7 +488,7 @@ export const softwarePackages: SoftwarePackage[] = [
     ],
     bestFor: 'Mobiele ondernemers',
     website: 'https://www.tellow.nl',
-    detailedReview: 'Tellow vertegenwoordigt een revolutionair nieuwe benadering: waarom zou je boekhouding en bankieren gescheiden houden? Tellow combineert beide in één modern mobile-first platform. Je krijgt een eigen IBAN-rekeningnummer, dus al je geld loopt via Tellow. Dit heeft twee voordelen: (1) geen handmatige bankkoppelingen nodig omdat je bank EN je boekhouding dezelfde data is, en (2) je hebt alle geld-informatie op één plek. De mobiele app is werkelijk uitstekend: Tellow heeft dit niet zomaar web-gebaseerd en op mobiel afgestemd, maar het is echt ontworpen voor telefoon-gebruik. Dit maakt het ideaal voor ondernemers die veel onderweg zijn. De GPS rittenregistratie is handig voor bezoekers die veel rijden. Het bedrijf richt zich op snelheid en simpliciteit - geen overbodige complexiteit. Nadeel: het is minder geschikt als je groeit en je eigen bank wilt houden. Ook is er geen multi-user support. Voor één persoon die veel mobiel werkt en waarde hecht aan eenvoud is Tellow uitstekend.',
+    detailedReview: 'Tellow kiest voor een andere benadering: waarom zou je boekhouding en bankieren gescheiden houden? Tellow combineert beide in één modern mobile-first platform. Je krijgt een eigen IBAN-rekeningnummer, dus al je geld loopt via Tellow. Dit heeft twee voordelen: (1) geen handmatige bankkoppelingen nodig omdat je bank EN je boekhouding dezelfde data is, en (2) je hebt alle geld-informatie op één plek. De mobiele app is goed uitgewerkt: Tellow heeft dit niet zomaar web-gebaseerd en op mobiel afgestemd, maar het is echt ontworpen voor telefoon-gebruik. Dit maakt het ideaal voor ondernemers die veel onderweg zijn. De GPS rittenregistratie is handig voor bezoekers die veel rijden. Het bedrijf richt zich op snelheid en simpliciteit - geen overbodige complexiteit. Nadeel: het is minder geschikt als je groeit en je eigen bank wilt houden. Ook is er geen multi-user support. Voor één persoon die veel mobiel werkt en waarde hecht aan eenvoud kan Tellow passend zijn.',
     faqItems: [
       {
         question: 'Wat betekent "embedded finance" en waarom is dit handig?',
@@ -504,7 +504,7 @@ export const softwarePackages: SoftwarePackage[] = [
       },
       {
         question: 'Wat is die GPS rittenregistratie?',
-        answer: 'Tellow kan automatisch GPS tracken welke afstanden je rijdt. Dit is handig voor ondernemers met kilometervergoeding (btw-voordeel). Perfect voor loodgieters, elektriciens en andere bezoekers.'
+        answer: 'Tellow kan automatisch GPS tracken welke afstanden je rijdt. Dit is handig voor ondernemers met kilometervergoeding (btw-voordeel). Geschikt voor loodgieters, elektriciens en andere ondernemers die veel onderweg zijn.'
       },
       {
         question: 'Is Tellow geschikt voor meerdereinvesteerders/partner?',
@@ -579,10 +579,10 @@ export function calculateMatchScores(answers: WizardAnswer): { package: Software
   results.sort((a, b) => b.score - a.score);
   const labeled = results.map((result, index) => {
     let label: string | undefined;
-    if (index === 0) label = 'Beste Match';
-    else if (result.package.id === 'e-boekhouden' && answers.isStarter) label = 'Beste voor Starters';
-    else if (result.package.id === 'moneymonk' && answers.activity === 'service') label = 'Beste voor Dienstverleners';
-    else if (result.package.id === 'exact-online') label = 'Beste voor Groei';
+    if (index === 0) label = 'Hoogste match';
+    else if (result.package.id === 'e-boekhouden' && answers.isStarter) label = 'Vaak gekozen door starters';
+    else if (result.package.id === 'moneymonk' && answers.activity === 'service') label = 'Geschikt voor dienstverleners';
+    else if (result.package.id === 'exact-online') label = 'Interessant bij groei';
     return { ...result, label };
   });
   return labeled;

@@ -13,6 +13,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/kennisbank`, lastModified, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${baseUrl}/tips`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/gratis-proberen`, lastModified, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${baseUrl}/beoordelingsmethode`, lastModified, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/over-ons`, lastModified, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${baseUrl}/contact`, lastModified, changeFrequency: 'monthly', priority: 0.5 },
   ];
 
   const softwareRoutes: MetadataRoute.Sitemap = softwarePackages.map(pkg => ({

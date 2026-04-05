@@ -30,7 +30,7 @@ export const articles: Article[] = [
           'Als ZZP\'er met een eenvoudige administratie (weinig facturen, geen personeel, geen voorraad) is zelf boekhouden vaak prima haalbaar. Moderne boekhoudpakketten begeleiden je stap voor stap door het proces: van facturen maken tot BTW-aangifte indienen. Met online handvatten en video-tutorials leer je snel hoe alles werkt.',
           'De kosten van een boekhoudpakket liggen tussen de €10 en €30 per maand, terwijl een boekhouder al snel €100 tot €300 per maand kost. Voor starters met een beperkt budget kan zelf boekhouden dus flink schelen. Over een heel jaar bespaar je al gauw €1.000 tot €3.000.',
           'Zelf boekhouden geeft je ook direct inzicht in je financiële situatie. Je ziet real-time hoeveel je hebt verdiend, waar je geld naartoe gaat en wat je winst is. Dit helpt je betere zakelijke beslissingen te nemen. Bovendien ben je minder afhankelijk van anderen — je hebt volledige controle over je gegevens.',
-          'Voor ondernemers die graag zelf control willen houden en die geld willen sparen, is zelf boekhouden een uitstekende keuze. Met iets van discipline en 30 minuten per week hou je je administratie up-to-date.',
+          'Voor ondernemers die graag zelf controle willen houden en die geld willen besparen, kan zelf boekhouden passend zijn. Met iets van discipline en 30 minuten per week hou je je administratie up-to-date.',
         ],
       },
       {
@@ -48,7 +48,7 @@ export const articles: Article[] = [
           'Steeds meer ondernemers kiezen voor een hybride aanpak. Dit bleek uit een enquête van de KvK waar 64% van de respondenten zei dat ze liever zelf boekhouden met hulp van een professional. Je doet de dagelijkse boekhouding zelf in een online pakket en geeft je boekhouder meekijktoegang. Zo houdt je de kosten laag en heb je toch professionele controle.',
           'Bijna alle moderne boekhoudpakketten bieden een accountantsportaal waar je boekhouder kan meekijken, correcties kan doen en de jaarrekening kan opstellen. Dit scheelt beide partijen veel tijd. Je boekhouder hoeft niet handmatig alles in te voeren — die gegevens staan al in het systeem.',
           'De praktijk gaat zo: je voert dagelijks je facturen in, koppeert je bank automatisch en scant je bonnetjes met OCR. Je boekhouder bekijkt dit maandelijks, corrigeert waar nodig en stelt aan het einde van het jaar je jaarrekening op. Dit model kost veel minder dan volledige uitbesteding, maar geeft je wel professionele ondersteuning.',
-          'Dit is ideaal voor ondernemers die graag wat zelf willen doen maar toch zekerheid willen hebben. Ook als je bedrijf groeit en ingewikkelder wordt, kun je geleidelijk meer werk naar je boekhouder verschuiven. Het systeem is flexibel en schaalt mee met je behoeften.',
+          'Dit past bij ondernemers die graag wat zelf willen doen maar toch zekerheid willen hebben. Ook als je bedrijf groeit en ingewikkelder wordt, kun je geleidelijk meer werk naar je boekhouder verschuiven. Het systeem is flexibel en schaalt mee met je behoeften.',
         ],
       },
       {
@@ -258,7 +258,7 @@ export const articles: Article[] = [
         paragraphs: [
           'Het type bedrijf dat je hebt bepaalt voor een groot deel welk boekhoudpakket geschikt is. Een ZZP\'er in de dienstverlening heeft andere behoeften dan een webshop of een BV met personeel.',
           'Voor ZZP-dienstverleners zijn urenregistratie en projectbeheer belangrijk. Je wilt zien hoeveel uur je aan welke klant hebt gewerkt. Voor handelsbedrijven zijn voorraadbeheer en webshopkoppelingen essentieel. Je moet je voorraad up-to-date houden en orders van je shop automatisch in je administratie krijgen.',
-          'Voor BV\'s zijn meergebruikerstoegang en een accountantsportaal onmisbaar. Je boekhouder moet kunnen meekijken en correcties kunnen doen. Ook rapporten en analyses zijn belangrijk.',
+          'Voor BV\'s zijn meergebruikerstoegang en een accountantsportaal belangrijk. Je boekhouder moet kunnen meekijken en correcties kunnen doen. Ook rapporten en analyses zijn belangrijk.',
           'Denk je dit goed door: wat zijn je unieke behoeften? Niet wat je denkt nodig te hebben, maar wat je écht nodig hebt.',
         ],
       },

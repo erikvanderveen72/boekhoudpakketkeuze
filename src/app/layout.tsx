@@ -9,9 +9,9 @@ const inter = Inter({ variable: '--font-inter', subsets: ['latin'], display: 'sw
 export const metadata: Metadata = {
   title: {
     template: '%s | Boekhoudpakketkeuze.nl',
-    default: 'Boekhoudpakketkeuze.nl | Vergelijk Boekhoudpakketten voor ZZP & MKB',
+    default: 'Boekhoudpakketten vergelijken in 2026 | Boekhoudpakketkeuze.nl',
   },
-  description: 'Vind het beste boekhoudpakket voor jouw bedrijf. Vergelijk de populairste boekhoudpakketten op prijs, functies en reviews. Onafhankelijke keuzehulp!',
+  description: 'Vergelijk boekhoudpakketten voor zzp en mkb op prijs, functies, gebruiksgemak en geschiktheid. Bekijk onze transparante beoordelingsmethode.',
   keywords: ['boekhoudpakket', 'boekhoudsoftware', 'boekhoudprogramma', 'vergelijken', 'zzp', 'mkb', 'boekhouden', 'boekhoudpakket vergelijken', 'beste boekhoudpakket 2026', 'boekhoudpakket zzp', 'online boekhouden', 'boekhoudpakket kiezen'],
   metadataBase: new URL('https://boekhoudpakketkeuze.nl'),
   openGraph: {
@@ -19,8 +19,8 @@ export const metadata: Metadata = {
     locale: 'nl_NL',
     url: 'https://boekhoudpakketkeuze.nl',
     siteName: 'Boekhoudpakketkeuze.nl',
-    title: 'Boekhoudpakketkeuze.nl | Vergelijk Boekhoudpakketten',
-    description: 'Vergelijk de beste boekhoudsoftware voor ZZP\'ers en MKB. Onafhankelijk.',
+    title: 'Boekhoudpakketten vergelijken in 2026 | Boekhoudpakketkeuze.nl',
+    description: 'Vergelijk boekhoudpakketten voor zzp en mkb op prijs, functies, gebruiksgemak en geschiktheid.',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Boekhoudpakketkeuze.nl - Vergelijk Boekhoudpakketten' }],
   },
   twitter: { card: 'summary_large_image', images: ['/og-image.png'] },
@@ -45,7 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   '@type': 'WebSite',
                   name: 'Boekhoudpakketkeuze.nl',
                   url: 'https://boekhoudpakketkeuze.nl',
-                  description: 'Vergelijk de beste boekhoudsoftware voor ZZP\'ers en MKB in Nederland',
+                  description: 'Vergelijk boekhoudsoftware voor zzp en mkb in Nederland op prijs, functies en geschiktheid',
                   potentialAction: {
                     '@type': 'SearchAction',
                     target: 'https://boekhoudpakketkeuze.nl/software/{search_term_string}',
@@ -57,7 +57,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   name: 'Boekhoudpakketkeuze.nl',
                   url: 'https://boekhoudpakketkeuze.nl',
                   logo: 'https://boekhoudpakketkeuze.nl/favicon.svg',
-                  description: 'Onafhankelijk vergelijkingsplatform voor boekhoudsoftware in Nederland. Vergelijk de populairste boekhoudpakketten op prijs, functies en reviews.',
+                  description: 'Vergelijkingsplatform voor boekhoudsoftware in Nederland. Transparant beoordeeld op basis van vaste criteria.',
                   contactPoint: {
                     '@type': 'ContactPoint',
                     contactType: 'Customer Service',

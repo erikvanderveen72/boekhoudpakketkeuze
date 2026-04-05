@@ -6,10 +6,11 @@ interface SoftwareCardProps {
   software: SoftwarePackage;
   matchScore?: number;
   matchLabel?: string;
+  matchTooltip?: string;
   rank?: number;
 }
 
-export default function SoftwareCard({ software, matchScore, matchLabel, rank }: SoftwareCardProps) {
+export default function SoftwareCard({ software, matchScore, matchLabel, matchTooltip, rank }: SoftwareCardProps) {
   const isTopPick = rank === 1;
 
   return (
@@ -17,7 +18,7 @@ export default function SoftwareCard({ software, matchScore, matchLabel, rank }:
       isTopPick ? 'border-primary/30 shadow-md ring-2 ring-primary/10' : 'border-border hover:border-primary/20'
     }`}>
       {matchLabel && (
-        <div className="absolute -right-12 top-6 rotate-45 bg-gradient-to-r from-amber-500 to-orange-500 px-12 py-1 shadow-md z-10">
+        <div className="absolute -right-12 top-6 rotate-45 bg-gradient-to-r from-amber-500 to-orange-500 px-12 py-1 shadow-md z-10" title={matchTooltip}>
           <span className="text-xs font-semibold text-white whitespace-nowrap">{matchLabel}</span>
         </div>
       )}

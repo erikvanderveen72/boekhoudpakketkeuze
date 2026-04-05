@@ -18,8 +18,8 @@ export default async function SoftwarePage() {
   const itemListSchema = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: 'Beste Boekhoudpakketten 2026',
-    description: 'Overzicht van de populairste boekhoudpakketten voor ZZP\'ers en MKB in Nederland, gerangschikt op beoordeling.',
+    name: 'Boekhoudpakketten vergelijken 2026',
+    description: 'Overzicht van boekhoudpakketten voor zzp en mkb in Nederland, gerangschikt op basis van onze beoordelingsmethode.',
     numberOfItems: packages.length,
     itemListElement: [...packages]
       .sort((a, b) => b.reviewScore - a.reviewScore)
@@ -62,6 +62,7 @@ export default async function SoftwarePage() {
             </Link>
           </div>
 
+          <p className="text-sm text-text-muted mb-4">De volgorde op deze pagina is gebaseerd op onze eigen beoordelingsmethode. We kijken onder meer naar prijs, functies, gebruiksgemak, support en geschiktheid per doelgroep.</p>
           <p className="text-sm text-text-muted mb-6">{packages.length} pakketten gevonden</p>
 
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-2">

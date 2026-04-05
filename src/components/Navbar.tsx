@@ -61,7 +61,7 @@ export default function Navbar() {
               : 'bg-emerald-500/20 text-emerald-300'
           }`}>
             <Shield size={12} />
-            <span>Onafhankelijk vergelijken</span>
+            <span>Transparant beoordeeld</span>
           </div>
           <Link
             href="/software?wizard=true"

@@ -67,12 +67,20 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       <section className="py-12 md:py-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <article className="bg-white rounded-2xl border border-border p-8">
+            {/* Laatst gecontroleerd */}
+            <p className="text-sm text-text-muted mb-6 italic">Laatst gecontroleerd op: 5 april 2026</p>
+
             {/* Intro */}
             {article.content.map((paragraph, i) => (
               <p key={i} className="text-text-muted leading-relaxed mb-6 text-lg">
                 {paragraph}
               </p>
             ))}
+
+            {/* Disclaimer */}
+            <div className="p-4 bg-stone-50 rounded-xl mb-6">
+              <p className="text-sm text-text-muted">Dit artikel is informatief bedoeld en helpt je bij het vergelijken van boekhoudsoftware. Controleer prijzen, voorwaarden en actuele functies altijd ook bij de aanbieder zelf.</p>
+            </div>
 
             {/* Sections */}
             {article.sections.map((section, i) => (

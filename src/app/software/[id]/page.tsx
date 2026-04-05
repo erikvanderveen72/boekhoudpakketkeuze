@@ -18,8 +18,8 @@ const featureDetails: Record<string, { label: string; description: string }> = {
 };
 
 const slugDescriptions: Record<string, string> = {
-  'e-boekhouden': 'e-Boekhouden.nl review: 15 maanden gratis, ideaal voor starters. Bekijk prijzen, functies en ervaringen.',
-  'moneymonk': 'MoneyMonk review: perfect voor ZZP\'ers met urenregistratie. Bekijk prijzen, functies en ervaringen.',
+  'e-boekhouden': 'e-Boekhouden.nl review: 15 maanden gratis, geschikt voor starters. Bekijk prijzen, functies en ervaringen.',
+  'moneymonk': 'MoneyMonk review: geschikt voor ZZP\'ers met urenregistratie. Bekijk prijzen, functies en ervaringen.',
   'moneybird': 'Moneybird review: gebruiksvriendelijk en populair. Bekijk prijzen, functies en ervaringen.',
   'jortt': 'Jortt review: simpel boekhouden voor beginners. Bekijk prijzen, functies en ervaringen.',
   'exact-online': 'Exact Online review: professioneel voor MKB. Bekijk prijzen, functies en ervaringen.',
@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const { id } = await params;
   const software = await getSoftwareBySlug(id);
   if (!software) return { title: 'Software niet gevonden' };
-  const desc = slugDescriptions[software.id] || `${software.name}: bekijk prijzen, functies, voor- en nadelen. Onafhankelijke review.`;
+  const desc = slugDescriptions[software.id] || `${software.name}: bekijk prijzen, functies, voor- en nadelen.`;
   return {
     title: `${software.name} Review — Prijzen, Functies & Ervaringen`,
     description: desc,
@@ -173,7 +173,7 @@ export default async function SoftwareDetailPage({ params }: { params: Promise<{
               {software.idealFor && software.idealFor.length > 0 && (
                 <div>
                   <h2 className="text-2xl font-bold text-text-main mb-4 flex items-center gap-2">
-                    <Target className="w-6 h-6 text-primary" /> Ideaal voor
+                    <Target className="w-6 h-6 text-primary" /> Geschikt voor
                   </h2>
                   <div className="grid sm:grid-cols-2 gap-3">
                     {software.idealFor.map((useCase, i) => (

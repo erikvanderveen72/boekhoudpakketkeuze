@@ -14,7 +14,7 @@ export default function Footer() {
               Boekhoudpakket<span className="text-blue-400">keuze</span>.nl
             </span>
           </Link>
-          <p className="mt-3 text-sm max-w-md">Onafhankelijk vergelijkingsplatform voor boekhoudsoftware in Nederland. Gratis vergelijken, zonder provisie.</p>
+          <p className="mt-3 text-sm max-w-md">Vergelijkingsplatform voor boekhoudsoftware in Nederland. We lichten onze beoordelingsmethode en commerciële relaties openbaar toe.</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
@@ -47,11 +47,11 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold text-white mb-4">Meer Software</h4>
+            <h4 className="font-semibold text-white mb-4">Over deze site</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/software/snelstart" className="hover:text-white transition-colors">SnelStart</Link></li>
-              <li><Link href="/software/tellow" className="hover:text-white transition-colors">Tellow</Link></li>
-              <li><Link href="/software/silvasoft" className="hover:text-white transition-colors">Silvasoft</Link></li>
+              <li><Link href="/over-ons" className="hover:text-white transition-colors">Over ons</Link></li>
+              <li><Link href="/beoordelingsmethode" className="hover:text-white transition-colors">Beoordelingsmethode</Link></li>
+              <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
               <li><Link href="/tips" className="hover:text-white transition-colors">Tips & Advies</Link></li>
             </ul>
           </div>
@@ -64,11 +64,11 @@ export default function Footer() {
           </div>
           <div className="flex items-center gap-2 bg-stone-800 rounded-full px-3 py-1 text-xs">
             <Shield size={12} />
-            <span>Onafhankelijk</span>
+            <span>Transparant over beoordelingscriteria en samenwerkingen</span>
           </div>
           <div className="flex items-center gap-2 bg-stone-800 rounded-full px-3 py-1 text-xs">
             <RefreshCw size={12} />
-            <span>Dagelijks bijgewerkt</span>
+            <span>Regelmatig gecontroleerd en bijgewerkt</span>
           </div>
           <div className="flex items-center gap-2 bg-stone-800 rounded-full px-3 py-1 text-xs">
             <Award size={12} />
@@ -77,7 +77,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-stone-800 pt-6 text-center text-xs text-stone-500">
-          <p>&copy; 2026 Boekhoudpakketkeuze.nl &mdash; Onafhankelijk vergelijkingsplatform</p>
+          <p>&copy; 2026 Boekhoudpakketkeuze.nl &mdash; Transparant beoordeeld op basis van vaste criteria</p>
         </div>
       </div>
     </footer>
