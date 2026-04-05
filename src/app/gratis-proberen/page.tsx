@@ -7,7 +7,7 @@ import FAQSchema from '@/components/FAQSchema';
 import { formatTrialPeriod } from '@/lib/utils';
 
 const faqItems = [
-  { question: 'Welk boekhoudpakket heeft de langste gratis proefperiode?', answer: 'e-Boekhouden.nl biedt de langste gratis proefperiode: maar liefst 15 maanden (450 dagen) gratis voor starters. Moneybird volgt met 6 maanden gratis.' },
+  { question: 'Welk boekhoudpakket heeft de langste gratis proefperiode?', answer: 'e-Boekhouden.nl biedt de langste gratis proefperiode: 15 maanden gratis voor starters. Moneybird biedt 60 dagen gratis, of 6 maanden bij keuze voor een gratis zakelijke rekening. Daarnaast bieden meerdere pakketten een gratis instapniveau.' },
   { question: 'Moet ik mijn creditcard opgeven voor een gratis proefperiode?', answer: 'De meeste boekhoudpakketten vragen geen creditcard voor de proefperiode. Je kunt gewoon starten met een e-mailadres en direct aan de slag.' },
   { question: 'Wat gebeurt er na de gratis proefperiode?', answer: 'Na de proefperiode kun je kiezen om een betaald abonnement af te sluiten of te stoppen. Je gegevens blijven meestal nog een periode bewaard zodat je kunt exporteren.' },
   { question: 'Kan ik meerdere boekhoudpakketten tegelijk gratis uitproberen?', answer: 'Ja, dat raden we zelfs aan. Probeer 2-3 pakketten tegelijk uit zodat je kunt vergelijken welke het beste bij jouw werkwijze past.' },

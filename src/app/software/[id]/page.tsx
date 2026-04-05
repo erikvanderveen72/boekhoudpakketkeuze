@@ -191,8 +191,17 @@ export default async function SoftwareDetailPage({ params }: { params: Promise<{
             <div>
               <div className="bg-white rounded-2xl p-6 border border-border sticky top-20">
                 <div className="text-center mb-6">
-                  <div className="text-4xl font-bold text-primary">&euro;{software.monthlyPrice.toFixed(2)}</div>
-                  <p className="text-sm text-text-muted">per maand</p>
+                  {software.priceLabel ? (
+                    <>
+                      <div className="text-xl font-bold text-primary">{software.priceLabel}</div>
+                      {software.priceExclBtw && <p className="text-xs text-text-muted">excl. btw</p>}
+                    </>
+                  ) : (
+                    <>
+                      <div className="text-4xl font-bold text-primary">{software.monthlyPrice === 0 ? 'Gratis' : <>&euro;{software.monthlyPrice.toFixed(2)}</>}</div>
+                      <p className="text-sm text-text-muted">per maand{software.priceExclBtw ? ' excl. btw' : ''}</p>
+                    </>
+                  )}
                   {software.priceNote && <span className="inline-block mt-2 px-3 py-1 bg-emerald-50 text-emerald-800 text-sm font-semibold rounded-full border border-emerald-200">{software.priceNote}</span>}
                 </div>
                 <div className="flex justify-between text-sm mb-6">

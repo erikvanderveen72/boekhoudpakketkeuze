@@ -41,10 +41,16 @@ export default function SoftwareCard({ software, matchScore, matchLabel, matchTo
 
         <div className="mt-4 flex items-center justify-end">
           <div className="text-right">
-            <div className="text-xl font-bold text-text-main">
-              &euro;{software.monthlyPrice.toFixed(2)}
-              <span className="text-sm font-normal text-text-muted">/mnd</span>
-            </div>
+            {software.priceLabel ? (
+              <div className="text-sm font-bold text-text-main">{software.priceLabel}</div>
+            ) : (
+              <div className="text-xl font-bold text-text-main">
+                {software.monthlyPrice === 0 ? 'Gratis' : <>&euro;{software.monthlyPrice.toFixed(2)}<span className="text-sm font-normal text-text-muted">/mnd</span></>}
+              </div>
+            )}
+            {software.priceExclBtw && (
+              <span className="text-xs text-text-muted">excl. btw</span>
+            )}
             {software.priceNote && (
               <span className="inline-block mt-1 px-2 py-0.5 bg-emerald-50 text-emerald-800 text-xs font-semibold rounded-full border border-emerald-200">
                 {software.priceNote}

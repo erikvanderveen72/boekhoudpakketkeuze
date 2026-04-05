@@ -28,7 +28,7 @@ export const articles: Article[] = [
         heading: 'Wanneer kun je het zelf doen?',
         paragraphs: [
           'Als ZZP\'er met een eenvoudige administratie (weinig facturen, geen personeel, geen voorraad) is zelf boekhouden vaak prima haalbaar. Moderne boekhoudpakketten begeleiden je stap voor stap door het proces: van facturen maken tot BTW-aangifte indienen. Met online handvatten en video-tutorials leer je snel hoe alles werkt.',
-          'De kosten van een boekhoudpakket liggen tussen de €10 en €30 per maand, terwijl een boekhouder al snel €100 tot €300 per maand kost. Voor starters met een beperkt budget kan zelf boekhouden dus flink schelen. Over een heel jaar bespaar je al gauw €1.000 tot €3.000.',
+          'De kosten van een boekhoudpakket liggen doorgaans tussen de €8 en €50 per maand, afhankelijk van het pakket en de functies. Sommige pakketten bieden een gratis instapniveau. Een boekhouder kost al snel €100 tot €300 per maand. Voor starters met een beperkt budget kan zelf boekhouden dus flink schelen.',
           'Zelf boekhouden geeft je ook direct inzicht in je financiële situatie. Je ziet real-time hoeveel je hebt verdiend, waar je geld naartoe gaat en wat je winst is. Dit helpt je betere zakelijke beslissingen te nemen. Bovendien ben je minder afhankelijk van anderen — je hebt volledige controle over je gegevens.',
           'Voor ondernemers die graag zelf controle willen houden en die geld willen besparen, kan zelf boekhouden passend zijn. Met iets van discipline en 30 minuten per week hou je je administratie up-to-date.',
         ],
@@ -180,7 +180,7 @@ export const articles: Article[] = [
       { question: 'Welk boekhoudpakket is het beste voor starters?', answer: 'e-Boekhouden.nl is populair bij starters vanwege de 15 maanden gratis proefperiode en gemak van gebruik. Moneybird en Jortt zijn ook goede opties door hun gebruiksgemak en goede support. Voor heel kleine starters is het gratis Tellow pakket een optie.' },
       { question: 'Moet ik als starter een boekhouder inhuren?', answer: 'Bij een eenvoudige ZZP-administratie is dat niet per se nodig. Een goed boekhoudpakket begeleidt je door het hele proces. Zodra je een BV opricht of personeel gaat aannemen, wordt een boekhouder wel praktisch noodzakelijk.' },
       { question: 'Hoeveel tijd kost boekhouden per week?', answer: 'Voor de meeste ZZP\'ers is een halfuur per week voldoende als je je administratie bijhoudt. Met automatische bankkoppelingen en OCR-scanning gaat dit nog sneller — soms 15 minuten per week.' },
-      { question: 'Wat zijn de kosten van boekhouden voor een starter?', answer: 'Met een boekhoudpakket betaal je €10-30 per maand (of gratis in je proefperiode). Deze kosten zijn aftrekbaar als bedrijfskosten. Als je een boekhouder inhuurt, ben je gauw €100-300 per maand kwijt.' },
+      { question: 'Wat zijn de kosten van boekhouden voor een starter?', answer: 'Met een boekhoudpakket betaal je doorgaans €8-50 per maand, afhankelijk van het pakket. Sommige pakketten bieden een gratis instapniveau of lange gratis proefperiode. Deze kosten zijn aftrekbaar als bedrijfskosten. Als je een boekhouder inhuurt, ben je gauw €100-300 per maand kwijt.' },
       { question: 'Welke zakelijke bankrekening is het beste voor starters?', answer: 'Populaire keuzes zijn Knab (gratis), Bunq Business (€9/maand) en N26 Business (€10/maand). Let op de kosten en of je bank PSD2 ondersteunt voor koppeling met je boekhoudpakket. De meeste grote banken bieden dit wel.' },
     ],
   },

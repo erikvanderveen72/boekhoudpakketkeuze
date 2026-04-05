@@ -16,7 +16,7 @@ export const revalidate = 60;
 const faqItems = [
   { question: 'Wat is het beste boekhoudpakket voor ZZP\'ers?', answer: 'Welk boekhoudpakket het best past, hangt af van je situatie. Voor starters is e-Boekhouden.nl vaak gekozen (15 maanden gratis). Voor dienstverleners is MoneyMonk interessant door de sterke urenregistratie. Moneybird scoort hoog op gebruiksgemak.' },
   { question: 'Kan ik boekhoudpakketten gratis proberen?', answer: 'Ja, alle boekhoudpakketten in ons overzicht bieden een gratis proefperiode van minimaal 14 dagen tot wel 15 maanden. Zo kun je rustig uitproberen welk pakket het beste bij je past.' },
-  { question: 'Wat kost een boekhoudpakket per maand?', answer: 'Boekhoudpakketten kosten tussen de €10 en €50 per maand. Voor ZZP\'ers zijn er goede opties vanaf €10 per maand. MKB-bedrijven betalen doorgaans meer voor extra functies zoals voorraadbeheer en meerdere gebruikers. De meeste pakketten bieden een gratis proefperiode.' },
+  { question: 'Wat kost een boekhoudpakket per maand?', answer: 'Boekhoudpakketten kosten doorgaans tussen de €8 en €50+ per maand, afhankelijk van het pakket en de functies. Sommige aanbieders werken met een vast maandbedrag, andere met een omzetafhankelijk of modulair prijsmodel. Verschillende pakketten bieden ook een gratis instapniveau. Controleer altijd de aanbieder voor actuele tarieven.' },
   { question: 'Hoe vergelijk ik boekhoudpakketten?', answer: 'Gebruik onze vergelijkingstool om pakketten naast elkaar te zetten op functies, prijs en reviews. Of gebruik de keuzehulp voor een persoonlijk advies in 2 minuten.' },
   { question: 'Hoe beoordeelt Boekhoudpakketkeuze.nl de pakketten?', answer: 'Wij beoordelen pakketten op basis van vaste criteria: prijs, functies, gebruiksgemak, ondersteuning, schaalbaarheid en geschiktheid per type ondernemer. Onze beoordelingsmethode en eventuele commerciële samenwerkingen lichten we openbaar toe.' },
 ];
@@ -131,8 +131,8 @@ export default async function HomePage() {
                 </div>
                 <div className="flex items-center gap-6">
                   <span className="hidden sm:block text-sm font-bold text-amber-600">&#11088; {pkg.reviewScore.toFixed(1)}</span>
-                  <div className="text-right font-bold text-text-main">
-                    {pkg.monthlyPrice === 0 ? 'Gratis' : `€${pkg.monthlyPrice.toFixed(2)}/mnd`}
+                  <div className="text-right text-sm font-bold text-text-main">
+                    {pkg.priceLabel || (pkg.monthlyPrice === 0 ? 'Gratis' : `€${pkg.monthlyPrice.toFixed(2)}/mnd`)}
                   </div>
                   <Link href={`/software/${pkg.id}`} className="px-3 py-1.5 rounded-lg border border-border text-sm font-medium hover:bg-stone-50 transition-colors">
                     Bekijk &rarr;
